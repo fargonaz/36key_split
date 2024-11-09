@@ -1,0 +1,20 @@
+if SHIELD_CORNE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "36key_split"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_MOUSE
+    default y
+
+
+endif
+
+if SHIELD_36KEY_SPLIT_LEFT || SHIELD_36KEY_SPLIT_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

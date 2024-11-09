@@ -1,0 +1,11 @@
+file_format: "1"
+id: 36key_split
+name: 36key_split
+type: shield
+url: https://github.com/fargonaz/36key_split
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - 36key_split_left
+  - 36key_split_right

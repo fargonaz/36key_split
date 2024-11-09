@@ -18,14 +18,14 @@
 #
 include:
   - board: nice_nano_v2
-    shield: dongle
+    shield: 36key_split_left
     snippet: studio-rpc-usb-uart zmk-usb-logging
   - board: nice_nano_v2
-    shield: mono36
+    shield: 36key_split_right
     snippet: zmk-usb-logging
-  - board: nice_nano_v2
-    shield: settings_reset
-    artifact-name: dongle-settings-reset
-  - board: nice_nano_v2
-    shield: settings_reset
-    artifact-name: mono36-settings-reset
+#- board: nice_nano_v2
+#  shield: settings_reset
+#  artifact-name: dongle-settings-reset
+#  - board: nice_nano_v2
+#  shield: settings_reset
+#    artifact-name: mono36-settings-reset

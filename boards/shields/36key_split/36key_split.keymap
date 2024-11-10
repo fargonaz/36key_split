@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <350>;
-            quick-tap-ms = <220>;
+             quick-tap-ms = <220>;
             require-prior-idle-ms = <500>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -65,45 +65,62 @@
     };
 };
 
-/ {
+/ { 
+//      left hand combos
   combos {
      compatible = "zmk,combos";
-     combo_func {
-            timeout-ms = <100>;
-            key-positions = <11 21>;
-            bindings = <&mo FUNCTION>;
-            layers = <1>;
-     };
+
      combo_num {
             timeout-ms = <100>;
             key-positions = <10 20>;
             bindings = <&mo LOWER>;
             layers = <1>;
      };
+
+     combo_func {
+            timeout-ms = <100>;
+            key-positions = <11 21>;
+            bindings = <&mo FUNCTION>;
+            layers = <1>;
+     };
+
      combo_lshift {
             timeout-ms = <100>;
             key-positions = <1 11>;
             bindings = <&kp LSHFT>;
             layers = <1>;
+
      };
+
+//      combo_lgui {
+//          timeout-ms = <100>;
+//            key-positions = <0 10>;
+//            bindings = <&kp LEFT_GUI>;
+//            layers = <1>;
+//     };     
+//     right hand combos         
+
      combo_rshift {
             timeout-ms = <100>;
             key-positions = <8 18>;
             bindings = <&kp LSHFT>;
             layers = <1>;
      };
+
      combo_rctrl {
             timeout-ms = <100>;
             key-positions = <6 16>;
             bindings = <&kp LCTRL>;
             layers = <1>;
      };
+
      combo_rgui {
             timeout-ms = <100>;
-            key-positions = <14 24>;
+            key-positions = <19 29>;
             bindings = <&kp RGUI>; 
             layers = <1>;
      }; 
+
   };
 };
 
@@ -156,7 +173,7 @@
             bindings = <
 &kp TAB  &trans  &kp END  &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
 &kp ESC  &trans  &kp DEL  &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-&studio_unlock   &trans  &trans   &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
+&studio_unlock   &bootloader  &trans   &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
                           &trans  &trans  &trans              &trans   &trans    &trans
             >;
         };

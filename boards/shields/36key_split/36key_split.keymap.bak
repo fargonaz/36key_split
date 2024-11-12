@@ -70,65 +70,41 @@
      compatible = "zmk,combos";
      combo_func {
             timeout-ms = <100>;
-            key-positions = <3 13>;
+            key-positions = <11 21>;
             bindings = <&mo FUNCTION>;
             layers = <1>;
      };
      combo_num {
             timeout-ms = <100>;
-            key-positions = <4 14>;
-            bindings = <&mo LOWER>;
-            layers = <1>;
-     };
-     combo_lgui {
-            timeout-ms = <100>;
             key-positions = <10 20>;
-            bindings = <&kp LEFT_GUI>;
-            layers = <1>;
-     };
-     combo_lalt {
-            timeout-ms = <100>;
-            key-positions = <11 21>;
-            bindings = <&kp LALT>;
-            layers = <1>;
-     };
-     combo_lctl {
-            timeout-ms = <100>;
-            key-positions = <12 22>;
-            bindings = <&kp LCTRL>;
+            bindings = <&mo LOWER>;
             layers = <1>;
      };
      combo_lshift {
             timeout-ms = <100>;
-            key-positions = <13 23>;
+            key-positions = <1 11>;
             bindings = <&kp LSHFT>;
             layers = <1>;
      };
      combo_rshift {
             timeout-ms = <100>;
-            key-positions = <16 26>;
+            key-positions = <8 18>;
             bindings = <&kp LSHFT>;
             layers = <1>;
      };
      combo_rctrl {
             timeout-ms = <100>;
-            key-positions = <17 27>;
+            key-positions = <6 16>;
             bindings = <&kp LCTRL>;
             layers = <1>;
      };
-     combo_ralt {
-            timeout-ms = <100>;
-            key-positions = <18 28>;
-            bindings = <&kp LALT>; 
-            layers = <1>;
-     }; 
      combo_rgui {
             timeout-ms = <100>;
-            key-positions = <19 29>;
+            key-positions = <14 24>;
             bindings = <&kp RGUI>; 
             layers = <1>;
+     }; 
   };
-};
 };
 
 / {

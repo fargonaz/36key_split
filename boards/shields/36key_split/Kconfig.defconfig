@@ -9,12 +9,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_MOUSE
     default y
 
-
 endif
 
 if SHIELD_36KEY_SPLIT_LEFT || SHIELD_36KEY_SPLIT_RIGHT
 
 config ZMK_SPLIT
     default y
+
 
 endif

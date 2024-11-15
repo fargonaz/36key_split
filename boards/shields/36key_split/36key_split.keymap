@@ -18,18 +18,18 @@
 
 / {
     behaviors {
-        td1: td_mo1_tg4 {
+        td1: td_mo2_tg4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&mo LOWER>, <&tog META>;
         };
 
-        td2: td_mo2_sqt {
+        td2: td_to2_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp SQT>, <&mo UPPER>;
+            bindings = <&kp SEMI>, <&to BASE>;
         };
 
         rpi: require_prior_idle {
@@ -138,60 +138,60 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp Q              &kp W        &kp E           &kp R         &kp T      &kp Y     &kp U         &kp I         &kp O          &kp P
-&rpi_a LEFT_GUI A  &rpi LALT S  &rpi_a LCTRL D  &rpi LSHFT F  &kp G      &kp H     &rpi RSHFT J  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI SEMI
-&kp Z              &kp X        &kp C           &kp V         &kp B      &kp N     &kp M         &kp COMMA     &kp DOT        &kp SLASH
-                                                &kp BSPC      &lt FUNCTION ESC  &td1             &lt UPPER SQT    &kp ENTER       &kp SPACE      
+&kp Q              &kp W        &kp E           &kp R         &kp T            &kp Y     &kp U         &kp I         &kp O          &kp P
+&rpi_a LEFT_GUI A  &rpi LALT S  &rpi_a LCTRL D  &rpi LSHFT F  &kp G            &kp H     &rpi RSHFT J  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI SEMI
+&kp Z              &kp X        &kp C           &kp V         &kp B            &kp N     &kp M         &kp COMMA     &kp DOT        &kp SLASH
+                                                &kp BSPC      &lt FUNCTION ESC &td1      &lt UPPER SQT &kp ENTER     &kp SPACE      
             >;
         };
 
         COLEMAK {
         display-name = "colemak";
         bindings = <
-&mt ESC Q  &kp W  &kp F  &kp P   &kp G    &kp J     &kp L  &kp U      &kp Y      &kp SEMI
-&rpi_a LEFT_GUI A  &rpi LALT R  &rpi_a LCTRL S  &rpi LSHFT T  &kp G      &kp H     &rpi RSHFT N  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI O
-&kp Z  &kp X  &kp C  &kp V   &kp B    &kp K     &kp M  &kp COMMA  &kp DOT    &kp SLASH
-             &trans  &kp TAB  &to BASE             &trans &trans  &trans  
+&mt ESC Q         &kp W       &kp F          &kp P        &kp G    &kp J     &kp L        &kp U        &kp Y         &td2
+&rpi_a LEFT_GUI A &rpi LALT R &rpi_a LCTRL S &rpi LSHFT T &kp G    &kp H     &rpi RSHFT N &rpi LCTRL K &rpi_a LALT L &rpi RGUI O
+&kp TAB Z         &kp X       &kp C          &kp V        &kp B    &kp K     &kp M        &kp COMMA    :&kp DOT       &kp SLASH
+                              &trans         &trans       &trans   &trans    &trans       &trans  
             >;
         };
 
         LOWER {
             display-name = "Lower";
             bindings = <
-&kp EXCL  &kp AT     &kp HASH       &kp LBKT              &kp RBKT               &kp PLUS   &func F7 N7  &func F8 N8  &func F9 N9  &func F10 N0
-&trans    &kp TILDE  &kp DQT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &func F4 N4  &func F5 N5  &func F6 N6  &kp UNDER
-&to COLEMAK    &trans     &kp LC(LS(C))  &kp LC(LS(V))         &kp BSLH               &kp EQUAL  &func F7 N1  &func F2 N2  &func F3 N3  &kp TILDE
-                                    &trans                &trans                 &trans                  &trans       &trans       &trans
+&kp EXCL    &kp AT     &kp HASH       &kp LBKT              &kp RBKT               &kp PLUS   &func F7 N7  &func F8 N8  &func F9 N9  &func F10 N0
+&trans      &kp TILDE  &kp DQT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &func F4 N4  &func F5 N5  &func F6 N6  &kp UNDER
+&to COLEMAK &trans     &kp LC(LS(C))  &kp LC(LS(V))         &kp BSLH               &kp EQUAL  &func F7 N1  &func F2 N2  &func F3 N3  &kp TILDE
+                       &trans         &trans                &trans                 &trans     &trans       &trans
             >;
         };
 
         UPPER {
             display-name = "Upper";
             bindings = <
-&trans  &mkp LCLK         &mmv MOVE_UP    &mkp RCLK          &msc SCRL_UP    &bt BT_PRV    &bt BT_NXT    &trans  &trans      &trans
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &msc SCRL_DOWN  &trans        &trans        &trans  &trans      &bootloader
-&trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans            &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR  &bt BT_CLR_ALL
-                                          &trans             &trans            &trans                      &trans  &trans      &trans
+&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP    &bt BT_PRV    &bt BT_NXT    &trans  &trans      &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans        &trans        &trans  &trans      &bootloader
+&trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR  &bt BT_CLR_ALL
+                        &trans          &trans           &trans          &trans        &trans        &trans
             >;
         };
 
         FUNCTION {
             display-name = "Function";
             bindings = <
-&kp TAB  &trans  &kp END  &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
-&kp ESC  &trans  &kp DEL  &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-&studio_unlock   &trans  &trans   &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
-                          &trans  &trans  &trans              &trans   &trans    &trans
+&kp TAB        &trans      &kp END &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
+&kp ESC        &trans      &kp DEL &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+&studio_unlock &bootloader &trans  &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
+                           &trans  &trans  &trans  &trans    &trans   &trans
             >;
         };
 
         META {
             display-name = "Meta";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
-&kp A  &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &kp F3
-&kp Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &kp F4     &kp F2
-                     &trans  &kp TAB  &to BASE         &trans     &trans  &trans  
+&mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
+&kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
+&kp TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &td2
+                  &trans &trans  &trans   &trans    &trans &trans  
             >;
         };
 

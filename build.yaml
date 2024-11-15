@@ -26,6 +26,6 @@ include:
 #- board: nice_nano_v2
 #  shield: settings_reset
 #  artifact-name: dongle-settings-reset
-#  - board: nice_nano_v2
+#- board: nice_nano_v2
 #  shield: settings_reset
-#    artifact-name: mono36-settings-reset
+#  artifact-name: mono36-settings-reset

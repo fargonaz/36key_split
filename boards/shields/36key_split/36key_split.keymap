@@ -134,7 +134,6 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
         BASE {
             display-name = "Base";
             bindings = <
@@ -148,8 +147,8 @@
         COLEMAK {
         display-name = "colemak";
         bindings = <
-&mt ESC Q         &kp W       &kp F          &kp P        &kp D    &kp J     &kp L        &kp U        &kp Y         &trans
-&kp A             &kp R       &kp S          &kp T        &kp G    &kp H     &kp N        &kp K        &kp L         &kp O
+&mt ESC Q         &kp W       &kp F          &kp P        &kp D    &kp J     &kp L        &kp U        &kp Y         &td2
+&kp A             &kp R       &kp S          &kp T        &kp G    &kp H     &kp N        &kp E        &kp I         &kp O
 &mt TAB Z         &kp X       &kp C          &kp V        &kp B    &kp K     &kp M        &kp COMMA    &kp DOT       &kp SLASH
                               &trans         &trans       &trans   &trans    &trans       &trans  
             >;
@@ -173,7 +172,7 @@
 &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR  &bt BT_CLR_ALL
                         &trans          &trans           &trans          &trans        &trans        &trans
             >;
-        };
+        }; 
 
         FUNCTION {
             display-name = "Function";
@@ -190,10 +189,10 @@
             bindings = <
 &mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
 &kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
-&kp TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
+&mt TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
                   &trans &trans  &trans   &trans    &trans &trans  
             >;
-        };
+        }; 
 
         extra2 {
             status = "reserved";

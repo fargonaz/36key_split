@@ -1,11 +1,11 @@
 file_format: "1"
-id: 36key_split
-name: 36key_split
+id: corne
+name: Corne
 type: shield
-url: https://github.com/fargonaz/36key_split
+url: https://github.com/foostan/crkbd/
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - 36key_split_left
-  - 36key_split_right
+  - corne_left
+  - corne_right

@@ -18,18 +18,18 @@
 
 / {
     behaviors {
-        td1: td_mo1_tg4 {
+        td1: td_mo2_tg4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&mo LOWER>, <&tog META>;
         };
 
-        td2: td_mo2_sqt {
+        td2: td_to2_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp SQT>, <&mo UPPER>;
+            bindings = <&kp SEMI>, <&to BASE>;
         };
 
         rpi: require_prior_idle {
@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <350>;
-             quick-tap-ms = <220>;
+            quick-tap-ms = <220>;
             require-prior-idle-ms = <500>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -65,47 +65,70 @@
     };
 };
 
-/ { 
+/ {
   combos {
      compatible = "zmk,combos";
+/*     combo_func {
+            timeout-ms = <100>;
+            key-positions = <3 13>;
+            bindings = <&mo FUNCTION>;
+            layers = <1>;
+     }; */
      combo_num {
             timeout-ms = <100>;
-            key-positions = <10 20>;
+            key-positions = <4 14>;
             bindings = <&mo LOWER>;
             layers = <1>;
      };
-     combo_func {
+     combo_lgui {
+            timeout-ms = <100>;
+            key-positions = <10 20>;
+            bindings = <&kp LEFT_GUI>;
+            layers = <1>;
+     };
+     combo_lalt {
             timeout-ms = <100>;
             key-positions = <11 21>;
-            bindings = <&mo FUNCTION>;
+            bindings = <&kp LALT>;
+            layers = <1>;
+     };
+     combo_lctl {
+            timeout-ms = <100>;
+            key-positions = <12 22>;
+            bindings = <&kp LCTRL>;
             layers = <1>;
      };
      combo_lshift {
             timeout-ms = <100>;
-            key-positions = <1 11>;
+            key-positions = <13 23>;
             bindings = <&kp LSHFT>;
             layers = <1>;
      };
      combo_rshift {
             timeout-ms = <100>;
-            key-positions = <8 18>;
+            key-positions = <16 26>;
             bindings = <&kp LSHFT>;
             layers = <1>;
      };
      combo_rctrl {
             timeout-ms = <100>;
-            key-positions = <6 16>;
+            key-positions = <17 27>;
             bindings = <&kp LCTRL>;
             layers = <1>;
      };
-     combo_rgui {
+     combo_ralt {
             timeout-ms = <100>;
-            key-positions = <14 24>;
-            bindings = <&kp RGUI>; 
+            key-positions = <18 28>;
+            bindings = <&kp LALT>; 
             layers = <1>;
      }; 
-
+     combo_rgui {
+            timeout-ms = <100>;
+            key-positions = <19 29>;
+            bindings = <&kp RGUI>; 
+            layers = <1>;
   };
+};
 };
 
 / {
@@ -115,60 +138,60 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp Q              &kp W        &kp E           &kp R         &kp T      &kp Y     &kp U         &kp I         &kp O          &kp P
-&rpi_a LEFT_GUI A  &rpi LALT S  &rpi_a LCTRL D  &rpi LSHFT F  &kp G      &kp H     &rpi RSHFT J  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI SEMI
-&kp Z              &kp X        &kp C           &kp V         &kp B      &kp N     &kp M         &kp COMMA     &kp DOT        &kp SLASH
-                                                &kp BSPC      &lt FUNCTION ESC  &td1             &lt UPPER SQT    &kp ENTER       &kp SPACE      
+&kp Q              &kp W        &kp E           &kp R         &kp T            &kp Y     &kp U         &kp I         &kp O          &kp P
+&rpi_a LEFT_GUI A  &rpi LALT S  &rpi_a LCTRL D  &rpi LSHFT F  &kp G            &kp H     &rpi RSHFT J  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI SEMI
+&kp Z              &kp X        &kp C           &kp V         &kp B            &kp N     &kp M         &kp COMMA     &kp DOT        &kp SLASH
+                                                &kp BSPC      &lt FUNCTION ESC &td1      &lt UPPER SQT &kp ENTER     &kp SPACE      
             >;
         };
 
         COLEMAK {
         display-name = "colemak";
         bindings = <
-&mt ESC Q  &kp W  &kp F  &kp P   &kp G    &kp J     &kp L  &kp U      &kp Y      &kp SEMI
-&rpi_a LEFT_GUI A  &rpi LALT R  &rpi_a LCTRL S  &rpi LSHFT T  &kp G      &kp H     &rpi RSHFT N  &rpi LCTRL K  &rpi_a LALT L  &rpi RGUI O
-&kp Z  &kp X  &kp C  &kp V   &kp B    &kp K     &kp M  &kp COMMA  &kp DOT    &kp SLASH
-             &trans  &kp TAB  &to BASE             &trans &trans  &trans  
+&mt ESC Q         &kp W       &kp F          &kp P        &kp D    &kp J     &kp L        &kp U        &kp Y         &trans
+&kp A             &kp R       &kp S          &kp T        &kp G    &kp H     &kp N        &kp K        &kp L         &kp O
+&mt TAB Z         &kp X       &kp C          &kp V        &kp B    &kp K     &kp M        &kp COMMA    &kp DOT       &kp SLASH
+                              &trans         &trans       &trans   &trans    &trans       &trans  
             >;
         };
 
         LOWER {
             display-name = "Lower";
             bindings = <
-&kp EXCL  &kp AT     &kp HASH       &kp LBKT              &kp RBKT               &kp PLUS   &func F7 N7  &func F8 N8  &func F9 N9  &func F10 N0
-&trans    &kp TILDE  &kp DQT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &func F4 N4  &func F5 N5  &func F6 N6  &kp UNDER
-&to COLEMAK    &trans     &kp LC(LS(C))  &kp LC(LS(V))         &kp BSLH               &kp EQUAL  &func F7 N1  &func F2 N2  &func F3 N3  &kp TILDE
-                                    &trans                &trans                 &trans                  &trans       &trans       &trans
+&kp EXCL    &kp AT     &kp HASH       &kp LBKT              &kp RBKT               &kp PLUS   &func F7 N7  &func F8 N8  &func F9 N9  &func F10 N0
+&trans      &kp TILDE  &kp DQT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &func F4 N4  &func F5 N5  &func F6 N6  &kp UNDER
+&to COLEMAK &trans     &kp LC(LS(C))  &kp LC(LS(V))         &kp BSLH               &kp EQUAL  &func F7 N1  &func F2 N2  &func F3 N3  &kp TILDE
+                       &trans         &trans                &trans                 &trans     &trans       &trans
             >;
         };
 
         UPPER {
             display-name = "Upper";
             bindings = <
-&trans  &mkp LCLK         &mmv MOVE_UP    &mkp RCLK          &msc SCRL_UP    &bt BT_PRV    &bt BT_NXT    &trans  &trans      &trans
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &msc SCRL_DOWN  &trans        &trans        &trans  &trans      &bootloader
-&trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans            &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR  &bt BT_CLR_ALL
-                                          &trans             &trans            &trans                      &trans  &trans      &trans
+&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP    &bt BT_PRV    &bt BT_NXT    &trans  &trans      &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans        &trans        &trans  &trans      &bootloader
+&trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &trans  &bt BT_CLR  &bt BT_CLR_ALL
+                        &trans          &trans           &trans          &trans        &trans        &trans
             >;
         };
 
         FUNCTION {
             display-name = "Function";
             bindings = <
-&kp TAB  &trans  &kp END  &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
-&kp ESC  &trans  &kp DEL  &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-&studio_unlock   &trans  &trans   &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
-                          &trans  &trans  &trans              &trans   &trans    &trans
+&kp TAB        &trans      &kp END &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
+&kp ESC        &trans      &kp DEL &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+&studio_unlock &bootloader &trans  &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
+                           &trans  &trans  &trans  &trans    &trans    &trans
             >;
         };
 
         META {
             display-name = "Meta";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
-&kp A  &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &kp F3
-&kp Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &kp F4     &kp F2
-                     &trans  &kp TAB  &to BASE         &trans     &trans  &trans  
+&mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
+&kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
+&kp TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
+                  &trans &trans  &trans   &trans    &trans &trans  
             >;
         };
 

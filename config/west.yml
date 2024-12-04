@@ -17,7 +17,8 @@ manifest:
       remote: dhruvinsh
       revision: main
     - name: zmk-helpers
+      remote: urob
       revision: main
-      path: modules/helpers
+      path: modules/helper
   self:
     path: config

@@ -1,0 +1,13 @@
+file_format: "1"
+id: 36key_split
+name: 36KEY_SPLIT
+type: shield
+url: https://github.com/fargonaz/36key_split
+requires: [pro_micro]
+features:
+  - keys
+  - studio
+siblings:
+  - split_dongle
+  - 36key_split_left
+  - 36key_split_right

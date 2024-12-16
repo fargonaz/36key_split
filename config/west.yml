@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/petejohanson
-    - name: dhruvinsh
-      url-base: https://github.com/dhruvinsh
     - name: urob
       url-base: https://github.com/urob
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -11,11 +9,9 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: feat/pointers-with-input-processors
-      import: app/west.yml
-    - name: zmk-tri-state
-      remote: dhruvinsh
+      # revision: feat/pointers-with-input-processors
       revision: main
+      import: app/west.yml
     - name: zmk-helpers
       remote: urob
       revision: main

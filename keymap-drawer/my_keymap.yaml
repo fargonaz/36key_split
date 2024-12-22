@@ -36,7 +36,7 @@ layers:
   - /
   - BSPC
   - {t: ESC, h: Function}
-  - '&td1'
+  - {t: 'dt Meta', h: Lower}
   - {t: '''', h: Upper}
   - ENTER
   - SPACE
@@ -50,7 +50,7 @@ layers:
   - L
   - U
   - Y
-  - '&td2'
+  - {t: ';', h: 'dt Base'}
   - '&hml LEFT_GUI A'
   - '&hml LALT R'
   - '&hml LCTRL S'
@@ -98,7 +98,7 @@ layers:
   - '&func F5 N5'
   - '&func F6 N6'
   - _
-  - {t: colemak, h: toggle}
+  - {t: colemak}
   - CAPS
   - Ctl+Sft+ C
   - Ctl+Sft+ V

@@ -44,7 +44,7 @@
             bindings = <
 &kp EXCL    &kp AT    &kp HASH      &kp LBKT             &kp RBKT              &kp PLUS  &func F7 N7 &func F8 N8 &func F9 N9 &func F10 N0
 &trans      &kp TILDE &kp DQT       &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS &func F4 N4 &func F5 N5 &func F6 N6 &kp UNDER
-&to COLEMAK &kp CAPS    &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
+&to 1 &kp CAPS    &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
                       &trans        &trans               &trans                &trans    &trans      &trans
             >;
         };

@@ -14,6 +14,12 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
+#define BASE  0
+#define COLEMAK  1
+#define LOWER  2
+#define UPPER  3
+#define FUNCTION  4 
+#define META  5
 
 / {
     keymap {
@@ -109,14 +115,6 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
-
-
-#define BASE  0
-#define COLEMAK  1
-#define LOWER  2
-#define UPPER  3
-#define FUNCTION  4 
-#define META  5
 
 / {
     behaviors {

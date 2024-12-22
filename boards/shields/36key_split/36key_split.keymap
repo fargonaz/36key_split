@@ -14,7 +14,81 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
-/* left-hand HRMs */
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        BASE {
+            display-name = "Base";
+            bindings = <
+&kp Q           &kp W        &kp E        &kp R        &kp T &kp Y         &kp U        &kp I        &kp O        &kp P
+&hml LEFT_GUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G &kp H         &hmr RSHFT J &hmr LCTRL K &hmr LALT L  &hmr RGUI SEMI
+&kp Z           &kp X        &kp C        &kp V        &kp B &kp N         &kp M        &kp COMMA    &kp DOT      &kp SLASH
+                             &kp BSPC     &lt 4 ESC    &td1  &lt UPPER SQT &kp ENTER    &kp SPACE
+            >;
+        };
+
+        COLEMAK {
+        display-name = "colemak";
+        bindings = <
+&mt ESC Q       &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
+&hml LEFT_GUI A &hml LALT R &hml LCTRL S &hml LSHFT T &kp G  &kp H  &hmr RSHFT N &hmr LCTRL E &hmr LALT I &hmr RGUI O
+&mt TAB Z       &kp X       &kp C        &kp V        &kp B  &kp K  &kp M        &kp COMMA    &kp DOT     &kp SLASH
+                            &trans       &trans       &trans &trans &trans       &trans  
+            >;
+        };
+
+        LOWER {
+            display-name = "Lower";
+            bindings = <
+&kp EXCL    &kp AT    &kp HASH      &kp LBKT             &kp RBKT              &kp PLUS  &func F7 N7 &func F8 N8 &func F9 N9 &func F10 N0
+&trans      &kp TILDE &kp DQT       &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS &func F4 N4 &func F5 N5 &func F6 N6 &kp UNDER
+&to COLEMAK &kp CAPS    &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
+                      &trans        &trans               &trans                &trans    &trans      &trans
+            >;
+        };
+
+        UPPER {
+            display-name = "Upper";
+            bindings = <
+&bt BT_SEL 0 &bt BT_NXT     &trans &trans  &trans         &trans         &mkp LCLK      &trans         &mkp RCLK       &trans 
+&bt BT_SEL 1 &bt BT_PRV     &trans &trans  &trans         &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_UP   &mmv MOVE_RIGHT &trans
+&bt BT_CLR   &bt BT_CLR_ALL &trans &trans  &trans         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_DOWN &msc SCRL_RIGHT &trans          
+                            &trans &trans  &trans         &trans         &trans         &trans
+            >;
+        }; 
+
+        FUNCTION {
+            display-name = "Function";
+            bindings = <
+&kp TAB        &trans      &kp END &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
+&kp ESC        &trans      &kp DEL &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+&studio_unlock &bootloader &trans  &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
+                           &trans  &trans  &trans  &trans    &trans    &trans
+            >;
+        };
+
+        META {
+            display-name = "Meta";
+            bindings = <
+&mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
+&kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
+&mt TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
+                  &trans &trans  &trans   &trans    &trans &trans  
+            >;
+        };
+
+        FUTURE {
+            display-name = "Future";
+            bindings = <
+&mt ESC Q &kp W &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I   &kp O  &kp P
+&kp A     &kp S &kp D  &kp F  &kp G  &kp H  &kp J  &kp K   &kp L  &trans
+&mt TAB Z &kp X &kp C  &kp V  &kp B  &kp N  &kp M  &kp DOT &trans &trans
+                &trans &trans &trans &trans &trans &trans
+            >;
+        };
+};
+};/* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
@@ -147,77 +221,4 @@ ZMK_HOLD_TAP(hmr,
 };
 };
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-        BASE {
-            display-name = "Base";
-            bindings = <
-&kp Q           &kp W        &kp E        &kp R        &kp T &kp Y         &kp U        &kp I        &kp O        &kp P
-&hml LEFT_GUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G &kp H         &hmr RSHFT J &hmr LCTRL K &hmr LALT L  &hmr RGUI SEMI
-&kp Z           &kp X        &kp C        &kp V        &kp B &kp N         &kp M        &kp COMMA    &kp DOT      &kp SLASH
-                             &kp BSPC     &lt 4 ESC    &td1  &lt UPPER SQT &kp ENTER    &kp SPACE
-            >;
-        };
 
-        COLEMAK {
-        display-name = "colemak";
-        bindings = <
-&mt ESC Q       &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
-&hml LEFT_GUI A &hml LALT R &hml LCTRL S &hml LSHFT T &kp G  &kp H  &hmr RSHFT N &hmr LCTRL E &hmr LALT I &hmr RGUI O
-&mt TAB Z       &kp X       &kp C        &kp V        &kp B  &kp K  &kp M        &kp COMMA    &kp DOT     &kp SLASH
-                            &trans       &trans       &trans &trans &trans       &trans  
-            >;
-        };
-
-        LOWER {
-            display-name = "Lower";
-            bindings = <
-&kp EXCL    &kp AT    &kp HASH      &kp LBKT             &kp RBKT              &kp PLUS  &func F7 N7 &func F8 N8 &func F9 N9 &func F10 N0
-&trans      &kp TILDE &kp DQT       &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS &func F4 N4 &func F5 N5 &func F6 N6 &kp UNDER
-&to COLEMAK &kp CAPS    &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
-                      &trans        &trans               &trans                &trans    &trans      &trans
-            >;
-        };
-
-        UPPER {
-            display-name = "Upper";
-            bindings = <
-&bt BT_SEL 0 &bt BT_NXT     &trans &trans  &trans         &trans         &mkp LCLK      &trans         &mkp RCLK       &trans 
-&bt BT_SEL 1 &bt BT_PRV     &trans &trans  &trans         &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_UP   &mmv MOVE_RIGHT &trans
-&bt BT_CLR   &bt BT_CLR_ALL &trans &trans  &trans         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_DOWN &msc SCRL_RIGHT &trans          
-                            &trans &trans  &trans         &trans         &trans         &trans
-            >;
-        }; 
-
-        FUNCTION {
-            display-name = "Function";
-            bindings = <
-&kp TAB        &trans      &kp END &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
-&kp ESC        &trans      &kp DEL &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-&studio_unlock &bootloader &trans  &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
-                           &trans  &trans  &trans  &trans    &trans    &trans
-            >;
-        };
-
-        META {
-            display-name = "Meta";
-            bindings = <
-&mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
-&kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
-&mt TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
-                  &trans &trans  &trans   &trans    &trans &trans  
-            >;
-        };
-
-        FUTURE {
-            display-name = "Future";
-            bindings = <
-&mt ESC Q &kp W &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I   &kp O  &kp P
-&kp A     &kp S &kp D  &kp F  &kp G  &kp H  &kp J  &kp K   &kp L  &trans
-&mt TAB Z &kp X &kp C  &kp V  &kp B  &kp N  &kp M  &kp DOT &trans &trans
-                &trans &trans &trans &trans &trans &trans
-            >;
-        };
-};
-};

@@ -91,6 +91,13 @@
 };
 };
 
+#define BASE  0
+#define COLEMAK  1
+#define LOWER  2
+#define UPPER  3
+#define FUNCTION  4 
+#define META  5
+
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";

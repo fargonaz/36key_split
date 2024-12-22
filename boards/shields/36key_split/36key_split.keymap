@@ -26,14 +26,14 @@
 &kp Q           &kp W        &kp E        &kp R        &kp T &kp Y         &kp U        &kp I        &kp O        &kp P
 &hml LEFT_GUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G &kp H         &hmr RSHFT J &hmr LCTRL K &hmr LALT L  &hmr RGUI SEMI
 &kp Z           &kp X        &kp C        &kp V        &kp B &kp N         &kp M        &kp COMMA    &kp DOT      &kp SLASH
-                             &kp BSPC     &lt 4 ESC    &td1  &lt 3 SQT &kp ENTER    &kp SPACE
+                             &kp BSPC     &lt 4 ESC    &td1  &lt 3 SQT     &kp ENTER    &kp SPACE
             >;
         };
 
         COLEMAK {
         display-name = "colemak";
         bindings = <
-&kp Q       &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
+&kp Q           &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
 &hml LEFT_GUI A &hml LALT R &hml LCTRL S &hml LSHFT T &kp G  &kp H  &hmr RSHFT N &hmr LCTRL E &hmr LALT I &hmr RGUI O
 &mt TAB Z       &kp X       &kp C        &kp V        &kp B  &kp K  &kp M        &kp COMMA    &kp DOT     &kp SLASH
                             &trans       &trans       &trans &trans &trans       &trans  
@@ -45,7 +45,7 @@
             bindings = <
 &kp EXCL    &kp AT    &kp HASH      &kp LBKT             &kp RBKT              &kp PLUS  &func F7 N7 &func F8 N8 &func F9 N9 &func F10 N0
 &trans      &kp TILDE &kp DQT       &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS &func F4 N4 &func F5 N5 &func F6 N6 &kp UNDER
-&to 1 &kp CAPS    &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
+&to 1       &kp CAPS  &kp LC(LS(C)) &kp LC(LS(V))        &kp BSLH              &kp EQUAL &func F7 N1 &func F2 N2 &func F3 N3 &kp TILDE
                       &trans        &trans               &trans                &trans    &trans      &trans
             >;
         };
@@ -76,7 +76,7 @@
 &mt ESC Q  &kp W  &kp E  &kp R   &kp T    &kp Y     &kp U  &kp I      &kp O      &kp P
 &kp A      &kp S  &kp D  &kp F   &kp G    &kp H     &kp J  &kp K      &kp L      &trans
 &mt TAB Z  &kp X  &kp C  &kp V   &kp B    &kp N     &kp M  &kp DOT    &trans     &trans
-                  &trans &trans  &trans   &trans    &trans &trans  
+                  &trans &trans  &trans   &trans    &trans &trans
             >;
         };
 

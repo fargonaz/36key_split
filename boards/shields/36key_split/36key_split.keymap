@@ -32,7 +32,7 @@
         COLEMAK {
         display-name = "colemak";
         bindings = <
-&mt ESC Q       &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
+&kp Q       &kp W       &kp F        &kp P        &kp D  &kp J  &kp L        &kp U        &kp Y       &td2
 &hml LEFT_GUI A &hml LALT R &hml LCTRL S &hml LSHFT T &kp G  &kp H  &hmr RSHFT N &hmr LCTRL E &hmr LALT I &hmr RGUI O
 &mt TAB Z       &kp X       &kp C        &kp V        &kp B  &kp K  &kp M        &kp COMMA    &kp DOT     &kp SLASH
                             &trans       &trans       &trans &trans &trans       &trans  

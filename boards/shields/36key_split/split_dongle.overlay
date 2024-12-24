@@ -5,6 +5,8 @@
  */
 
 #include "36key_split.overlay"
+#include "36key_split_left.overlay"
+#include "36key_split_right.overlay"
 
 / {
    chosen {

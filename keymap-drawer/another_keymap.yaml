@@ -36,7 +36,7 @@ layers:
   - /
   - BSPC
   - {t: ESC, h: Function}
-  - {t: 'dt Meta', h: Lower}
+  - {t: dt Meta, h: Lower}
   - {t: '''', h: Upper}
   - ENTER
   - SPACE
@@ -50,7 +50,7 @@ layers:
   - L
   - U
   - Y
-  - {t: ';', h: 'dt Base'}
+  - {t: ';', h: dt Base}
   - '&hml LEFT_GUI A'
   - '&hml LALT R'
   - '&hml LCTRL S'
@@ -98,7 +98,7 @@ layers:
   - '&func F5 N5'
   - '&func F6 N6'
   - _
-  - {t: colemak}
+  - {t: colemak, h: toggle}
   - CAPS
   - Ctl+Sft+ C
   - Ctl+Sft+ V
@@ -262,28 +262,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [10, 20]
-  k: LEFT GUI
-  l: [colemak]
-- p: [11, 21]
-  k: LALT
-  l: [colemak]
-- p: [12, 22]
-  k: LCTRL
-  l: [colemak]
-- p: [13, 23]
-  k: LSHFT
-  l: [colemak]
-- p: [16, 26]
-  k: LSHFT
-  l: [colemak]
-- p: [17, 27]
-  k: LCTRL
-  l: [colemak]
-- p: [18, 28]
-  k: LALT
-  l: [colemak]
-- p: [19, 29]
-  k: RGUI
-  l: [colemak]

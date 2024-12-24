@@ -5,7 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "default_layout.dtsi"
+#include "36key_split.dtsi"
 
 &default_layout {
   transform = <&default_transform>;

@@ -64,7 +64,7 @@
             display-name = "Function";
             bindings = <
 &kp TAB        &trans      &kp END &trans  &trans  &trans    &trans    &kp INS  &trans    &kp PG_UP
-&kp ESC        &trans      &kp DEL &trans  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+&kp ESC        &trans      &kp DEL &kp LS(SEMI)  &trans  &kp HOME  &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
 &studio_unlock &bootloader &trans  &trans  &trans  &trans    &trans    &trans   &trans    &kp PG_DN
                            &trans  &trans  &trans  &trans    &trans    &trans
             >;

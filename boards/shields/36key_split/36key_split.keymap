@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h> 
-#include <dt-bindings/zmk/pointing.h>
 #include "mouse.dtsi"
 #include "36key_split.dtsi"
 #include "zmk-helpers/helper.h"

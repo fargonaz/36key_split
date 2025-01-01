@@ -1,0 +1,2 @@
+parse_config:
+  zmk_additional_includes: ["/home/acme/dotfiles/zmk/zmk-helpers/include"]

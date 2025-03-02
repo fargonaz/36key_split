@@ -9,8 +9,9 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: feat/pointers-with-input-processors
+      # revision: feat/pointers-with-input-processors
       # revision: main
+      revision: v0.2
       import: app/west.yml
     - name: zmk-helpers
       remote: urob

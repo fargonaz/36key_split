@@ -31,7 +31,7 @@
 &kp Q           &kp W        &kp E        &kp R        &kp T         &kp Y         &kp U        &kp I        &kp O        &kp P
 &kp A           &kp S        &kp D        &kp F        &kp G         &kp H         &kp J        &kp K        &kp L        &kp SEMI
 &kp Z           &kp X        &kp C        &kp V        &kp B         &kp N         &kp M        &kp COMMA    &kp DOT      &kp SLASH
-                             &kp BSPC     &lt 4 ESC    &mo LOWER     &to 3     &kp ENTER     &kp SPACE
+                             &kp BSPC     &lt 4 ESC    &mo LOWER     &to 3         &kp  ENTER   &kp SPACE
             >;
         };
 
@@ -50,7 +50,7 @@
             bindings = <
 &kp EXCL      &kp AT       &kp HASH      &kp LBKT      &kp RBKT       &kp PLUS  &mt F7 N7 &mt F8 N8 &mt F9 N9 &mt F10 N0
 &trans        &kp TILDE    &kp DQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS &mt F4 N4 &mt F5 N5 &mt F6 N6 &kp UNDER
-&to 1         &kp CAPS     &kp LC(LS(C)) &kp LC(LS(V)) &kp BSLH       &kp EQUAL &mt F1 N1 &mt F2 N2 &mt F3 N3 &kp TILDE
+&to 1        &kp CAPS     &kp LC(LS(C)) &kp LC(LS(V)) &kp BSLH       &kp EQUAL &mt F1 N1 &mt F2 N2 &mt F3 N3 &kp TILDE
                            &trans        &trans        &trans         &trans    &trans      &trans
             >;
         };
